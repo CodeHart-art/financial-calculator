@@ -5,11 +5,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Select Calculator(A,B,C): ");
-        String calculator = scanner.nextLine();
+        String calculatorType = scanner.nextLine();
 
 
 
-        if (calculator.equalsIgnoreCase("a")){
+        if (calculatorType.equalsIgnoreCase("a")){
             System.out.println("welcome to the mortgage calculator");
 
             System.out.print("What is your principle amount: ");
@@ -30,6 +30,21 @@ public class Main {
 
             System.out.println("Here are your monthly payments: $ " + monthlyPayments);
             System.out.println("Here is your total interest: $ " + totalInterest );
+        }
+        else if (calculatorType.equalsIgnoreCase("b")) {
+            System.out.println("Welcome to future value calculator");
+            System.out.println("Estimate the future value of your Deposit");
+
+            System.out.print("Enter your deposit amount: ");
+            double initialDeposit = scanner.nextDouble();
+
+            System.out.println("Enter offered Interest: ");
+            double annualInterest = scanner.nextInt();
+
+            System.out.println("How many years of Compounding Interest: ");
+            int compoundingYears = scanner.nextInt();
+
+
         }
         scanner.close();
     }

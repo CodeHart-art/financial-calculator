@@ -26,8 +26,10 @@ public class Main {
 
 
             double monthlyPayments = princible * (monthlyInterest * Math.pow(1 + monthlyInterest,totalMonths)) / (Math.pow(1 + monthlyInterest,totalMonths) - 1);
+            double totalInterest = princible - (monthlyPayments * loanLength);
 
             System.out.println("Here are your monthly payments: $ " + monthlyPayments);
+            System.out.println("Here is your total interest: $ " + totalInterest );
         }
         scanner.close();
     }

@@ -38,11 +38,20 @@ public class Main {
             System.out.print("Enter your deposit amount: ");
             double initialDeposit = scanner.nextDouble();
 
-            System.out.println("Enter offered Interest: ");
-            double annualInterest = scanner.nextInt();
+            System.out.print("Enter offered Interest: ");
+            double annualInterest = scanner.nextDouble();
 
-            System.out.println("How many years of Compounding Interest: ");
+            System.out.print("How many years of Compounding Interest: ");
             int compoundingYears = scanner.nextInt();
+
+            annualInterest = annualInterest / 100;
+
+
+            double futureValue =  initialDeposit  *   Math.pow((1   + (annualInterest   / 365)) ,(365   *   compoundingYears));
+            double totalInterest = futureValue - initialDeposit;
+
+            System.out.println("Expected value in " + compoundingYears + " years is $: " + futureValue);
+            System.out.println("Total interest accrued is: $ " + totalInterest);
 
 
         }
